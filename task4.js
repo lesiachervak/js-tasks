@@ -1,17 +1,5 @@
-function job(delay) {
-    return new Promise(function(resolve) {
-        setTimeout(function() {
-            console.log('Resolved with delay:', delay);
-            resolve('done ' + delay);
-        }, delay);
-    });
-}
+const a = ['abc', 'bcd', 'cde', 'dfg'];
+const b = ['zxy', 'wzs', 'bcd', 'bxs', 'qwr'];
+const c = []; 
 
-const promise = Promise.all([job(1000), job(2000), job(500), job(1500)]);
-
-promise.then(function(data) {
-    console.log('All done');
-    data.forEach(function(text) {
-        console.log(text);
-    });
-});
+// put aall elements from the first array which are unique, not using array and string methods
